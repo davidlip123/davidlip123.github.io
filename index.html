@@ -30,6 +30,13 @@ function myFunction() {
     }
   }
 }
+
+document.onkeyup = function (event) {
+  alert(event.keyCode);
+  if (event.keyCode >8 && event.keyCode <16) {
+  document.getElementById("myInput").focus();
+  }
+};
 </script>
   </head>
   
