@@ -1,0 +1,115 @@
+
+
+
+<html>
+<head>
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+function myFunction() {
+  // Declare variables
+
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("applist");
+  li = ul.getElementsByTagName('div');
+  
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+//  alert("d");
+    a = li[i].getElementsByTagName("span")[0];
+    txtValue = a.textContent || a.innerText;
+	//alert(txtValue);
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+
+document.onkeyup = function (event) {
+  //alert(event.keyCode);
+  if (event.keyCode >8 && event.keyCode <16) {
+  //document.getElementById("myInput").focus();
+  }
+};
+</script>
+  </head>
+  
+  
+  <body>
+  
+  <div class="header">
+  <h1>חנות אפליקציות לשיואמי</h1>
+ 
+</div>
+
+
+ <div class="body">
+
+ 
+ 
+ 
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="חפש אפליקציה...">
+
+<div id="applist" class="vertical-menu">
+
+  
+  
+  <div class='center-corner'>
+  
+   <img src="images/moovit.png"/>
+    <span class="caption">מוביט</span>
+  
+  <a href="/apps/movit.apk" class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה</a>
+  </div>
+
+
+  <div class='center-corner'>
+  
+   <img src="images/noicon.png"/>
+    <span class="caption">חנות אפליקציות</span>
+  
+  <a href="apps/QinStoree.apk" class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה</a>
+  </div>
+
+  <div class='center-corner'>
+  
+   <img src="images/moovit.png"/>
+    <span class="caption">הפועלים</span>
+  
+  <a href="http://daniphone.co.il/wp-content/uploads/apps/Moovit.apk" class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה</a>
+  </div>
+
+  <div class='center-corner'>
+  
+   <img src="images/moovit.png"/>
+    <span class="caption">מוביט</span>
+  
+  <a href="http://daniphone.co.il/wp-content/uploads/apps/Moovit.apk" class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה</a>
+  </div>
+
+  <div class='center-corner'>
+  
+   <img src="images/moovit.png"/>
+    <span class="caption">מוביט</span>
+  
+  <a href="http://daniphone.co.il/wp-content/uploads/apps/Moovit.apk" class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה</a>
+  </div>
+
+
+  </div>
+  
+  </div>
+
+</body>
+</html>
