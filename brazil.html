@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script>
+
 function myFunction() {
   // Declare variables
 
@@ -31,12 +32,31 @@ function myFunction() {
   }
 }
 
+
+function GetURLParameter(sParam)
+{
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) 
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) 
+        {
+            return sParameterName[1];
+        }
+    }
+	}
+
 document.onkeyup = function (event) {
   //alert(event.keyCode);
   if (event.keyCode >8 && event.keyCode <16) {
   //document.getElementById("myInput").focus();
   }
 };
+
+
+
+
 </script>
   </head>
   
@@ -54,10 +74,46 @@ document.onkeyup = function (event) {
  
  
  
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="חפש אפליקציה...">
+ 
+
+ 
+
 
 <div id="applist" class="vertical-menu">
 
+  
+   <div id="main">
+
+	
+		<div class="search-box">
+			<div class="search-icon"><i class="fa fa-search search-icon"></i></div>
+		
+				<input type="text" onkeyup="myFunction()" placeholder="חפש אפליקציה..." id="search" >
+		
+			<svg class="search-border" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" viewBox="0 0 671 111" style="enable-background:new 0 0 671 111;"
+			 xml:space="preserve">
+          <path class="border" d="M335.5,108.5h-280c-29.3,0-53-23.7-53-53v0c0-29.3,23.7-53,53-53h280"/>
+          <path class="border" d="M335.5,108.5h280c29.3,0,53-23.7,53-53v0c0-29.3-23.7-53-53-53h-280"/>
+        </svg>
+			<div class="go-icon"><i class="fa fa-arrow-left"></i></div>
+		</div>
+</div>
+ 
+  
+    <br/>
+	  <br/>
+	    <br/>
+  <br/>
+    
+  <div id="qinStore" class='center-corner'>
+  
+   <img src="images/noicon.png"/>
+    <span class="caption">עדכון לחנות אפליקציות</span>
+  
+    <span class="description"> עדכון לחנות אפליקציות עדכון לחנות אפליקציות עדכון לחנות אפליקציות עדכון לחנות אפליקציות </span>
+  <a href="http://daniphone.co.il/wp-content/uploads/apps/Moovit.apk" class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה</a>
+  </div>
   
   
   <div class='center-corner'>
@@ -65,17 +121,18 @@ document.onkeyup = function (event) {
    <img src="images/moovit.png"/>
     <span class="caption">מוביט</span>
   
-  <a href="/apps/movit.apk" class="btn">
+    <span class="description"> אפליקציית הניווט של ישראל אפליקציית הניווט של ישראל אפליקציית הניווט של ישראל אפליקציית הניווט של ישראל</span>
+  <a href="http://daniphone.co.il/wp-content/uploads/apps/Moovit.apk" class="btn">
   <i class="fa fa-download"></i> לחץ להורדה</a>
   </div>
 
 
   <div class='center-corner'>
   
-   <img src="images/noicon.png"/>
-    <span class="caption">חנות אפליקציות</span>
+   <img src="images/moovit.png"/>
+    <span class="caption">בנק יהב</span>
   
-  <a href="apps/QinStoree.apk" class="btn">
+  <a href="http://daniphone.co.il/wp-content/uploads/apps/Moovit.apk" class="btn">
   <i class="fa fa-download"></i> לחץ להורדה</a>
   </div>
 
@@ -112,4 +169,24 @@ document.onkeyup = function (event) {
   </div>
 
 </body>
+
+<script>
+var blog = GetURLParameter('brand');
+var versionparam = GetURLParameter('version');
+var storeTile= document.getElementById("qinStore");
+
+
+    var version = parseFloat(versionparam);
+if(version>=1.5)
+{
+ storeTile.style.display = 'none';
+//alert("hiding store");
+}
+
+
+
+
+
+
+</script
 </html>
