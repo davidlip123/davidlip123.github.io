@@ -175,7 +175,7 @@ a, a:visited, a:hover {
   background-image: linear-gradient(#69696a, #69696a);
   background-repeat: no-repeat;
   transition: background-size .5s, color .5s;
-  height:180px;
+  height:200px;
 }
 .center-right-left, .center-top-bottom, .center-corner {
   background-position: 50% 50%;
