@@ -16,7 +16,7 @@ function myFunction() {
   input = document.getElementById('search');
   filter = input.value.toUpperCase();
   ul = document.getElementById("applist");
-  li = ul.getElementsByTagName('div');
+  li = ul.getElementsByTagName('a');
   
   // Loop through all list items, and hide those who don't match the search query
   for (i = 0; i < li.length; i++) {
@@ -100,9 +100,7 @@ document.onkeyup = function (event) {
   
 
  
-  
-    <br/>
-	  <br/>
+
 	    <br/>
   <br/>
     
@@ -151,7 +149,7 @@ var storeTile= document.getElementById("qinStore");
 
 
     var version = parseFloat(versionparam);
-if(version>=1.1)
+if(version>=1.2)
 {
  storeTile.style.display = 'none';
 //alert("hiding store");
