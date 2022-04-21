@@ -34,6 +34,40 @@ function myFunction() {
 }
 
 
+
+function filterByModel() {
+  // Declare variables
+
+  
+  var model=GetURLParameter("brand");
+ if (model!="kitkat")
+ return;
+  
+  
+  var filter, ul, li, appItem, i, txtValue;
+  
+  
+   ul = document.getElementById("applist");
+  li = ul.getElementsByTagName('a');
+  
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+  
+//  alert("d");
+    appItem = li[i];
+	var datamodel=appItem.dataset.model;
+	if(datamodel=="undefined"||datamodel==undefined)
+	continue;
+ //alert(datamodel);
+	
+    if (true) {
+      li[i].style.display = "none";
+  
+  }
+  }
+  
+}
+
 function GetURLParameter(sParam)
 {
     var sPageURL = window.location.search.substring(1);
@@ -50,12 +84,14 @@ function GetURLParameter(sParam)
 
 document.onkeyup = function (event) {
   //alert(event.keyCode);
+  
+  
   if (event.keyCode >8 && event.keyCode <16) {
   //document.getElementById("myInput").focus();
   }
 };
 
-
+//data-model="1s"
 
 
 </script>
@@ -103,6 +139,8 @@ document.onkeyup = function (event) {
 
 	    <br/>
   <br/>
+  
+  
     
   <a  href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/QinStore.apk"  id="qinStore" class='center-corner'>
   
@@ -1934,10 +1972,11 @@ document.onkeyup = function (event) {
 </body>
 
 <script>
-var blog = GetURLParameter('brand');
 var versionparam = GetURLParameter('version');
 var storeTile= document.getElementById("qinStore");
 
+
+filterByModel();
 
     var version = parseFloat(versionparam);
 if(version>=1.2)
