@@ -184,6 +184,10 @@ a, a:visited, a:hover {
 .center-corner {
   background-size: 0% 0%;
 }
+
+.center-corner  img{
+  max-width:60px;
+}
 .center-corner:hover {
   background-size: 100% 100%;
   color: #fff;
