@@ -38,34 +38,21 @@ function myFunction() {
 function filterByModel() {
   // Declare variables
 
-  
+  var  ul, li, appItem, i, txtValue;
   var model=GetURLParameter("brand");
- if (model!="kitkat")
- return;
   
+   var qin1s = document.getElementById("qin1sapps");
+    var f21pro = document.getElementById("f21proapps");
+ if (model=="kitkat")
+ 
+ {
+ 
+   f21pro.style.display = "none";
+ }
   
-  var filter, ul, li, appItem, i, txtValue;
-  
-  
-   ul = document.getElementById("applist");
-  li = ul.getElementsByTagName('a');
-  
-  // Loop through all list items, and hide those who don't match the search query
-  for (i = 0; i < li.length; i++) {
-  
-//  alert("d");
-    appItem = li[i];
-	var datamodel=appItem.dataset.model;
-	if(datamodel=="undefined"||datamodel==undefined)
-	continue;
- //alert(datamodel);
-	
-    if (true) {
-      li[i].style.display = "none";
-  
-  }
-  }
-  
+  else
+ qin1s.style.display = "none";
+
 }
 
 function GetURLParameter(sParam)
@@ -1961,7 +1948,14 @@ document.onkeyup = function (event) {
 
   
   
+  <div id="f21proapps">
   
+  </div>
+  
+  
+    <div id="qin1sapps">
+  
+    </div>
   
   
   

@@ -38,31 +38,21 @@ function myFunction() {
 function filterByModel() {
   // Declare variables
 
-  
+  var  ul, li, appItem, i, txtValue;
   var model=GetURLParameter("brand");
- if (model!="kitkat")
- return;
   
+   var qin1s = document.getElementById("qin1sapps");
+    var f21pro = document.getElementById("f21proapps");
+ if (model=="kitkat")
+ 
+ {
+ 
+   f21pro.style.display = "none";
+ }
   
-  var filter, ul, li, appItem, i, txtValue;
-  
-  
-   ul = document.getElementById("applist");
-  li = ul.getElementsByTagName('a');
-  
-  // Loop through all list items, and hide those who don't match the search query
-  for (i = 1; i < li.length; i++) {
-  
-//  alert("d");
-    appItem = li[i];
-	var datamodel=appItem.dataset.model;
-	if(datamodel=="undefined"||datamodel==undefined)
-	{
-    li[i].style.display = "none";
-  }
-  
-  
-  }
+  else
+ qin1s.style.display = "none";
+
 }
 
 function GetURLParameter(sParam)
@@ -130,15 +120,12 @@ document.onkeyup = function (event) {
 
 <div id="applist" class="vertical-menu">
 
-  
 
- 
-  
-    
-	    <br/>
+  <br/>
   <br/>
     
-  <a  href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/QinStore.apk"  id="qinStore" class='center-corner'>
+	
+	  <a  href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/QinStore.apk"  id="qinStore" class='center-corner'>
   
    <img src="images/noicon.png"/>
     <span class="caption">עדכון לחנות אפליקציות</span>
@@ -149,10 +136,10 @@ document.onkeyup = function (event) {
   </span>
   
   </a>
-  
-  
-  
-  <a  href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/whatsapp.apk"   class='center-corner'>
+	
+	
+	
+	  <a  href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/whatsapp.apk"   class='center-corner'>
   
    <img src="images/noicon.png"/>
     <span class="caption">ווצאפ</span>
@@ -164,20 +151,17 @@ document.onkeyup = function (event) {
   
   </a>
   
+	
+	
+	<div id="f21proapps">
 
   
-      <a  href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/movit.apk"   class='center-corner'>
   
-   <img src="images/movit.png"/>
-    <span class="caption">מוביט</span>
   
-    <span class="description"> מוביט-אפליקציית הניווט של ישראל</span>
-  <span class="btn">
-  <i class="fa fa-download"></i> לחץ להורדה
-  </span>
+
+
   
-  </a>
-  
+
   
   
   
@@ -241,7 +225,17 @@ document.onkeyup = function (event) {
   </a>
   
   
+  </div>
   
+  
+  
+  
+  
+  
+  
+  
+  
+  <div id="qin1sapps">
                 <a data-model="1s"  href="https://onedrive.live.com/download?cid=133EED252831EC41&resid=133EED252831EC41%216174&authkey=AHvHXVAcapImLeQ"   class='center-corner'>
   
    <img src="images/waze.png"/>
@@ -295,8 +289,90 @@ document.onkeyup = function (event) {
   
   
 
-  </div>
   
+  
+              <a  data-model="1s" href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/gps.apk"   class='center-corner'>
+  
+   <img src="images/gps.png"/>
+    <span class="caption">מתקן Gps</span>
+  
+    <span class="description">מתקן GPS לשיואמי</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>
+  
+                <a  data-model="1s" href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/tikun.apk"   class='center-corner'>
+  
+   <img src="images/tikun.png"/>
+    <span class="caption">תיקון הכללי</span>
+  
+    <span class="description">תיקון הכללי</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>
+  
+  
+                  <a  data-model="1s" href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/tehilim.apk"   class='center-corner'>
+  
+   <img src="images/tikun.png"/>
+    <span class="caption">תהילים</span>
+  
+    <span class="description">תהילים</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>
+  
+  
+                    <a  data-model="1s" href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/gallery.apk"   class='center-corner'>
+  
+   <img src="images/cingulo.png"/>
+    <span class="caption">גלרייה</span>
+  
+    <span class="description">אפליקציית גלריה נוספת</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>
+  
+  
+                      <a  data-model="1s" href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/screenshot.apk"   class='center-corner'>
+  
+   <img src="images/screenshot.png"/>
+    <span class="caption">הקלטת מסך</span>
+  
+    <span class="description">הקלטת מסך</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>
+  
+  
+        <a  href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/movit.apk"   class='center-corner'>
+  
+   <img src="images/movit.png"/>
+    <span class="caption">מוביט</span>
+  
+    <span class="description"> מוביט-אפליקציית הניווט של ישראל</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>
+  
+  
+  
+   </div>
+
+ </div>
+   
   </div>
 
 </body>
