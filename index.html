@@ -34,6 +34,37 @@ function myFunction() {
 }
 
 
+
+function filterByModel() {
+  // Declare variables
+
+  
+  var model=GetURLParameter("brand");
+ if (model!="kitkat")
+ return;
+  
+  
+  var filter, ul, li, appItem, i, txtValue;
+  
+  
+   ul = document.getElementById("applist");
+  li = ul.getElementsByTagName('a');
+  
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 1; i < li.length; i++) {
+  
+//  alert("d");
+    appItem = li[i];
+	var datamodel=appItem.dataset.model;
+	if(datamodel=="undefined"||datamodel==undefined)
+	{
+    li[i].style.display = "none";
+  }
+  
+  
+  }
+}
+
 function GetURLParameter(sParam)
 {
     var sPageURL = window.location.search.substring(1);
@@ -50,12 +81,14 @@ function GetURLParameter(sParam)
 
 document.onkeyup = function (event) {
   //alert(event.keyCode);
+  
+  
   if (event.keyCode >8 && event.keyCode <16) {
   //document.getElementById("myInput").focus();
   }
 };
 
-
+//data-model="1s"
 
 
 </script>
@@ -149,42 +182,8 @@ document.onkeyup = function (event) {
   
   
   
-        <a  href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/drive.apk"   class='center-corner'>
+
   
-   <img src="images/drive.png"/>
-    <span class="caption">גוגל דרייב</span>
-  
-    <span class="description">אחסון של גוגל דרייב</span>
-  <span class="btn">
-  <i class="fa fa-download"></i> לחץ להורדה
-  </span>
-  
-  </a>
-  
-  
-          <a  href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/dmss.apk"   class='center-corner'>
-  
-   <img src="images/dmss.png"/>
-    <span class="caption">DMSS</span>
-  
-    <span class="description">אפליקציית מצלמות אבטחה</span>
-  <span class="btn">
-  <i class="fa fa-download"></i> לחץ להורדה
-  </span>
-  
-  </a>
-  
-              <a  href="https://onedrive.live.com/download?cid=133EED252831EC41&resid=133EED252831EC41%216174&authkey=AHvHXVAcapImLeQ"   class='center-corner'>
-  
-   <img src="images/waze.png"/>
-    <span class="caption">וייז</span>
-  
-    <span class="description">אפליקציית ניווט</span>
-  <span class="btn">
-  <i class="fa fa-download"></i> לחץ להורדה
-  </span>
-  
-  </a>
 
 
             <a  href="https://onedrive.live.com/download?cid=133EED252831EC41&resid=133EED252831EC41%216175&authkey=ALBgtSMnXHlWJA0"   class='center-corner'>
@@ -242,6 +241,59 @@ document.onkeyup = function (event) {
   </a>
   
   
+  
+                <a data-model="1s"  href="https://onedrive.live.com/download?cid=133EED252831EC41&resid=133EED252831EC41%216174&authkey=AHvHXVAcapImLeQ"   class='center-corner'>
+  
+   <img src="images/waze.png"/>
+    <span class="caption">וייז</span>
+  
+    <span class="description">אפליקציית ניווט</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>
+  
+  
+                <a data-model="1s"  href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/oznia.apk"   class='center-corner'>
+  
+   <img src="images/oznia.png"/>
+    <span class="caption">תיקון לבאג האוזניות</span>
+  
+    <span class="description">אפליקצייה לתיקון באג האוזניה במכשירי 1S</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>
+  
+  
+          <a  data-model="1s" href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/drive.apk"   class='center-corner'>
+  
+   <img src="images/drive.png"/>
+    <span class="caption">גוגל דרייב</span>
+  
+    <span class="description">אחסון של גוגל דרייב</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>
+  
+    
+          <a  data-model="1s" href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/bttransfer.apk"   class='center-corner'>
+  
+   <img src="images/bluetooth.png"/>
+    <span class="caption">העברת אנשי קשר</span>
+  
+    <span class="description">העברת אנשי קשר ע"י בלוטוס</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>
+  
+  
 
   </div>
   
@@ -250,10 +302,11 @@ document.onkeyup = function (event) {
 </body>
 
 <script>
-var blog = GetURLParameter('brand');
 var versionparam = GetURLParameter('version');
 var storeTile= document.getElementById("qinStore");
 
+
+filterByModel();
 
     var version = parseFloat(versionparam);
 if(version>=1.3)
@@ -267,5 +320,5 @@ if(version>=1.3)
 
 
 
-</script
+</script>
 </html>

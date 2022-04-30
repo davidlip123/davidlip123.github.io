@@ -199,6 +199,7 @@ a, a:visited, a:hover {
 }
 .caption {
     display: block;
+	line-height:35px;
 }
 
 .description {
