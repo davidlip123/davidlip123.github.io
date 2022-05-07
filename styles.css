@@ -195,55 +195,6 @@ a, a:visited, a:hover {
 }
 
 
-.center-corner:visited, .center-corner:hover {
-  color: inherit;
-  text-decoration: none;
-  
-   background-size: 100% 100%;
-  color: #3399cc;
-}
-
-.center-corner:active{
-  color: inherit;
-  text-decoration: none;
-  
-   background-size: 100% 100%;
-  color: #38c4cc;
-}
-
-
-a:link {
-  color: #FF0000;
-}
-
-/* visited link */
-a:visited {
-  color: #00FF00;
-}
-
-/* mouse over link */
-a:hover {
-  color: #FF00FF;
-}
-
-/* selected link */
-a:active {
-  color: #0000FF;
-}
-
-
-.center-corner:focus{
-  color: inherit;
-  text-decoration: none;
-  
-   background-size: 100% 100%;
-  color: #38c4cc;
-}
-
-
-.center-corner:active {
- 
-}
 .caption {
     display: block;
 	line-height:35px;

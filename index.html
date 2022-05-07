@@ -98,7 +98,24 @@ document.onkeyup = function (event) {
  
  
  
+ 
+   <div id="main">
 
+	
+		<div class="search-box">
+			<div class="search-icon"><i class="fa fa-search search-icon"></i></div>
+		
+				<input type="text" onkeyup="myFunction()" placeholder="חפש אפליקציה..." id="search" >
+		
+			<svg class="search-border" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" viewBox="0 0 671 111" style="enable-background:new 0 0 671 111;"
+			 xml:space="preserve">
+          <path class="border" d="M335.5,108.5h-280c-29.3,0-53-23.7-53-53v0c0-29.3,23.7-53,53-53h280"/>
+          <path class="border" d="M335.5,108.5h280c29.3,0,53-23.7,53-53v0c0-29.3-23.7-53-53-53h-280"/>
+        </svg>
+			<div class="go-icon"><i class="fa fa-arrow-left"></i></div>
+		</div>
+</div>
+ 
 
 
 <div id="applist" class="vertical-menu">
@@ -122,7 +139,7 @@ document.onkeyup = function (event) {
 	
 	
 	
-	  <a  id="whatsappp" href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/whatsapp.apk"   class='center-corner'>
+	  <a id="whatsappp"  href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/whatsapp.apk"   class='center-corner'>
   
    <img src="images/noicon.png"/>
     <span class="caption">ווצאפ</span>
@@ -153,7 +170,7 @@ document.onkeyup = function (event) {
   
 
 
-            <a  id="test1" href="https://onedrive.live.com/download?cid=133EED252831EC41&resid=133EED252831EC41%216175&authkey=ALBgtSMnXHlWJA0"   class='center-corner'>
+            <a  href="https://onedrive.live.com/download?cid=133EED252831EC41&resid=133EED252831EC41%216175&authkey=ALBgtSMnXHlWJA0"   class='center-corner'>
   
    <img src="images/tuner.png"/>
     <span class="caption">Guitar Tuna</span>
@@ -366,6 +383,7 @@ var storeTile= document.getElementById("qinStore");
 
 
 filterByModel();
+
 
 document.getElementById("whatsappp").focus();
 
