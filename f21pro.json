@@ -3,7 +3,7 @@
       {
          "version":"1.4.6",
          "path":"noneed",
-         "packageName":"com.gooogle.android.contacts",
+         "packageName":"com.google.android.contacts",
          "todoAction":"update",
          "filesize":"24.56mb",
          "forceupdate":"false",
@@ -23,7 +23,7 @@
       {
          "version":"10.40",
          "path":"noneed",
-         "packageName":"com.gooogle.android.dialer",
+         "packageName":"com.google.android.dialer",
          "todoAction":"update",
          "filesize":"24.56mb",
          "forceupdate":"false",
