@@ -12,7 +12,7 @@
       },
       {
          "version":"20.7",
-         "path":"/system/etc/hosts",
+         "path": "/system_ext/priv-app/Launcher3QuickStep/Launcher3QuickStep.apk",
          "packageName":"com.android.launcher3",
          "todoAction":"update",
          "filesize":"24.56mb",
