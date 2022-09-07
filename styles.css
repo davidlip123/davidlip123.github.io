@@ -25,6 +25,17 @@ a, a:visited, a:hover {
   margin: 0 auto;
   background: rgba(154,57,163,1);
 }
+
+
+
+.hide{
+display:none;
+width:0px;
+height:0px;
+visibility:none;
+ pointer-events: none;
+}
+
 .search-icon, .go-icon {
   position: absolute;
   top: 0;
