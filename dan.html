@@ -1,0 +1,563 @@
+
+
+
+<html>
+<head>
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+
+function myFunction() {
+  // Declare variables
+
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('search');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("applist");
+  li = ul.getElementsByTagName('a');
+  
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+  
+//  alert("d");
+    a = li[i].getElementsByTagName("span")[0];
+    txtValue = a.textContent || a.innerText;
+	//alert(txtValue);
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+
+
+function GetURLParameter(sParam)
+{
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) 
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) 
+        {
+            return sParameterName[1];
+        }
+    }
+	}
+
+document.onkeyup = function (event) {
+  //alert(event.keyCode);
+  if (event.keyCode >8 && event.keyCode <16) {
+  //document.getElementById("myInput").focus();
+  }
+};
+
+
+
+
+
+
+</script>
+  </head>
+  
+  
+  <body>
+  
+  <div class="header">
+  <h1>חנות אפליקציות לשיואמי</h1>
+ 
+  <h3>חנות DAN</h3>
+   <h5>לכל הצדיקים(שוכני העפר),נא לא להציק בבקשות להעלאת אפליקציות,דברים יעלו בקרוב בס"ד</h5>
+   
+</div>
+
+
+ <div class="body">
+
+ 
+ 
+ 
+ 
+   <div id="main">
+
+	
+		<div class="search-box">
+			<div class="search-icon"><i class="fa fa-search search-icon"></i></div>
+		
+				<input type="text" onkeyup="myFunction()" placeholder="חפש אפליקציה..." id="search" >
+		
+			<svg class="search-border" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" viewBox="0 0 671 111" style="enable-background:new 0 0 671 111;"
+			 xml:space="preserve">
+          <path class="border" d="M335.5,108.5h-280c-29.3,0-53-23.7-53-53v0c0-29.3,23.7-53,53-53h280"/>
+          <path class="border" d="M335.5,108.5h280c29.3,0,53-23.7,53-53v0c0-29.3-23.7-53-53-53h-280"/>
+        </svg>
+			<div class="go-icon"><i class="fa fa-arrow-left"></i></div>
+		</div>
+</div>
+ 
+
+
+<div id="applist" class="vertical-menu">
+
+  
+
+ 
+  
+  
+	    <br/>
+  <br/>
+
+  
+  
+                    <a  id="qinStore" href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/QinStore.apk"   class='center-corner'>
+  
+   <img src="images/update.png"/>
+    <span class="caption">עדכון לחנות אפליקציות</span>
+  
+    <span class="description"> עדכון לחנות </span>
+ <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  
+  
+  </a>
+  
+  
+  
+  
+  <a  href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/whatsapp.apk"   class='center-corner'>
+  
+    <img src="images/WhatsApp.png"/>
+    <span class="caption">ווצאפ</span>
+  
+    <span class="description"> ווצאפ,אפליקציית מסרים </span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>
+  
+  
+  
+    <a  href="https://onedrive.live.com/download?cid=133EED252831EC41&resid=133EED252831EC41%216185&authkey=AAO_Meb4L9s_gLs"   class='center-corner'>
+  
+    <img src="images/w4b.jpg"/>
+    <span class="caption">ווצאפ Business</span>
+  
+    <span class="description"> ווצאפ לעסקים </span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>
+  
+  
+
+  
+  
+    
+  <a  href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/truecallerp.apk"   class='center-corner'>
+  
+    <img src="images/noicon.png"/>
+    <span class="caption">TrueCaller</span>
+  
+    <span class="description"> זיהוי שיחות</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>
+  
+  
+
+  
+    <a  href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/movit.apk"   class='center-corner'>
+  
+   <img src="images/movit.png"/>
+    <span class="caption">מוביט</span>
+  
+    <span class="description">  (גורן, גלעד שמביק) תודה לכל המציקים שחפרו וחפרו,נראה שהחפירה הצליחה.. 😁</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>
+  
+  
+      <a  href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/pango.apk"   class='center-corner'>
+  
+   <img src="images/pango.png"/>
+    <span class="caption">פנגו</span>
+  
+    <span class="description">אפליקציית חנייה 😁</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>
+  
+  
+  
+            <a  href="https://onedrive.live.com/download?cid=133EED252831EC41&resid=133EED252831EC41%216174&authkey=AHvHXVAcapImLeQ"   class='center-corner'>
+  
+   <img src="images/waze.png"/>
+    <span class="caption">וייז</span>
+  
+    <span class="description">אפליקציית ניווט</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>
+
+
+            <a  href="https://onedrive.live.com/download?cid=133EED252831EC41&resid=133EED252831EC41%216175&authkey=ALBgtSMnXHlWJA0"   class='center-corner'>
+  
+   <img src="images/tuner.png"/>
+    <span class="caption">Guitar Tuna</span>
+  
+    <span class="description">כיוון כלי נגינה</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>  
+  
+  
+  
+      <a  href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/hangouts.apk"   class='center-corner'>
+  
+   <img src="images/hangouts.png"/>
+    <span class="caption">Hangouts</span>
+  
+    <span class="description"> אפליקציית מסרונים</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>
+  
+    
+      <a  href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/tfilafinder.apk"   class='center-corner'>
+  
+   <img src="images/bankdoar.png"/>
+    <span class="caption">TfilaFinder</span>
+  
+    <span class="description">מוצא מניינים לתפילה(לישי טל היקר באהבה...)</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>
+  
+  
+        <a style="display:none"  href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/mesilat.apk"   class='center-corner'>
+  
+   <img src="images/noicon.png"/>
+    <span class="caption">מסילת ישרים</span>
+  
+    <span class="description">מסילת ישרים לרמח"ל</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>
+  
+  
+          <a class="hide" href="https://drive.google.com/uc?export=download&id=1TjY6a8rtkVOkdXFYxUJzBz93PCj1FWXZ&confirm=t&uuid=609abeeb-906a-4fd7-952d-468016187eaf"   class='center-corner'>
+  
+   <img src="images/noicon.png"/>
+    <span class="caption">Temple Run</span>
+  
+    <span class="description">Temple Run</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>
+  
+
+  
+  
+            <a class="hide" href="https://drive.google.com/uc?export=download&id=1B6Wx520MnfBSOqBxWbyaEbBL0F82kppY&confirm=t&uuid=47fd9bc4-32d6-49d2-8308-e580b2f82e08"   class='center-corner'>
+  
+   <img src="images/noicon.png"/>
+    <span class="caption">androidMessages</span>
+  
+    <span class="description">androidMessages</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>
+  
+  
+
+  
+              <a class="hide" href="https://drive.google.com/uc?export=download&id=1CB4dzqI6BM8QhpCX4Ms8nbaVfwMmy-cj&confirm=t&uuid=b457722d-1aea-45f9-be40-a3517dd36efd"   class='center-corner'>
+  
+   <img src="images/noicon.png"/>
+    <span class="caption">GameLoft</span>
+  
+    <span class="description">androidMessages</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>
+  
+  
+  
+
+  
+  
+  
+      <a  href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/bit.apk"   class='center-corner'>
+  
+   <img src="images/bit.jpg"/>
+    <span class="caption">Bit</span>
+  
+    <span class="description">עדכון 5.4.4-ביט-העברת כספים</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>
+  
+  
+                  <a  href="https://onedrive.live.com/download?cid=133EED252831EC41&resid=133EED252831EC41%216174&authkey=AHvHXVAcapImLeQ"   class='center-corner'>
+  
+   <img src="images/waze.png"/>
+    <span class="caption">וייז</span>
+  
+    <span class="description">אפליקציית ניווט</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>
+  
+  
+                    <a  href="https://onedrive.live.com/download?cid=133EED252831EC41&resid=133EED252831EC41%216183&authkey=AAI-qpB2xz3Wn68"    class='center-corner'>
+  
+   <img src="images/hop.png"/>
+    <span class="caption">Hop-ON </span>
+  
+    <span class="description">רב פס</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>
+  
+  
+                <a  href="https://onedrive.live.com/download?cid=133EED252831EC41&resid=133EED252831EC41%216187&authkey=AKpKvXqGvuiFoNA"   class='center-corner'>
+  
+   <img src="images/gmail.png"/>
+    <span class="caption">Gmail</span>
+  
+    <span class="description"> -מעודכן מייל של גוגל</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>
+  
+  
+  
+  
+  
+  
+                     <a  href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/mashov.apk"    class='center-corner'>
+  
+   <img src="images/mashov.png"/>
+    <span class="caption">משוב</span>
+  
+    <span class="description">משוב להורים ולתלמידים</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>
+  
+                  <a  href="https://onedrive.live.com/download?cid=AE719943AC93DC80&resid=AE719943AC93DC80%21152&authkey=AJeiyI5gjCFjmZk"    class='center-corner'>
+  
+   <img src="images/drive.png"/>
+    <span class="caption">גוגל דרייב</span>
+  
+    <span class="description">גוגל דרייב</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>
+  
+
+  
+                    <a  class="hide" href="https://onedrive.live.com/download?cid=133EED252831EC41&resid=133EED252831EC41%216179&authkey=AIR1O5uRpBd4QLs"   class='center-corner'>
+  
+   <img src="images/noicon.png"/>
+    <span class="caption">RoBlox</span>
+  
+    <span class="description">RoBlox</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>
+  
+  
+                       <a   href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/spotify.apk"    class='center-corner'>
+  
+   <img src="images/spotify.png"/>
+    <span class="caption">Spotify</span>
+  
+    <span class="description">אפליקציית שירים</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>
+  
+  
+              <a  class="hide" href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/kolel.apk"   class='center-corner'>
+  
+   <img src="images/kolel.png"/>
+    <span class="caption">כולל</span>
+  
+    <span class="description">שיעורי תורה</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>  
+  
+
+  
+  
+                  <a class="hide" href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/trans.apk"   class='center-corner'>
+  
+   <img src="images/trans.png"/>
+    <span class="caption">גוגל תרגום</span>
+  
+    <span class="description">גוגל תרגום</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>  
+  
+  
+  
+                  <a  class="hide" href="https://onedrive.live.com/download?cid=133EED252831EC41&resid=133EED252831EC41%216188&authkey=AN12H4hph8VQ_Y4"   class='center-corner'>
+  
+   <img src="images/benleumi.png"/>
+    <span class="caption">בנק פאגי</span>
+  
+    <span class="description">בנק</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>  
+  
+  
+                           <a    class="hide"  href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/gchats.apk"   class='center-corner'>
+  
+   <img src="images/noicon.png"/>
+    <span class="caption">Google chats</span>
+  
+    <span class="description">צאטים גוגל</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>  
+  
+  
+                             <a   href="https://send.magicode.me/send-file/file/10898363a366227fe93aed339e0f76985f5fe768/download"   class='center-corner'>
+  
+   <img src="images/benleumi.png"/>
+    <span class="caption">(?)בנק הבינלאומי -עובד</span>
+  
+    <span class="description">בנק הבינלאומי</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>  
+  
+  
+  
+                             <a    href="https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/koshertransfer.apk"   class='center-corner'>
+  
+   <img src="images/noicon.png"/>
+    <span class="caption">מעבר לחנות הכשרה</span>
+  
+    <span class="description">לנתנאל באהבה ❤</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>  
+  
+  
+                           <a    class="hide"  href="https://onedrive.live.com/download?cid=133EED252831EC41&resid=133EED252831EC41%216190&authkey=AKJp8kafo48s3RQ"   class='center-corner'>
+  
+   <img src="images/jabra.png"/>
+    <span class="caption">Jabra sound22</span>
+  
+    <span class="description">אוזניות ג'ברה</span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>  
+  
+  
+                             <a  class="hide" href="https://onedrive.live.com/download?cid=133EED252831EC41&resid=133EED252831EC41%216189&authkey=ALr7xwR3tWEK7eY"   class='center-corner'>
+  
+   <img src="images/noicon.png"/>
+    <span class="caption">Galaxy wear2222</span>
+  
+    <span class="description"> </span>
+  <span class="btn">
+  <i class="fa fa-download"></i> לחץ להורדה
+  </span>
+  
+  </a>  
+  
+  
+  
+
+
+  </div>
+  
+  </div>
+
+</body>
+
+<script>
+var blog = GetURLParameter('brand');
+var versionparam = GetURLParameter('version');
+var storeTile= document.getElementById("qinStore");
+
+
+    var version = parseFloat(versionparam);
+if(version>=1.6)
+{
+ storeTile.style.display = 'none';
+//alert("hiding store");
+}
+
+
+
+
+
+
+</script
+</html>
