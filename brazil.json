@@ -20,16 +20,6 @@
          "isApp":"true",
          "downloadlink": "https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/Launcher3QuickStep.apk"
       }
-	  ,
-      {
-         "version":"20.7",
-         "path": "/system/priv-app/Phonesky.apk",
-         "packageName":"com.android.vending",
-         "todoAction":"update",
-         "filesize":"24.56mb",
-         "forceupdate":"false",
-         "isApp":"true",
-         "downloadlink": "https://send.magicode.me/send-file/file/67e50e052591b45167a9622a8efda5771399fcfb/download"
-      }
+	  
    ]
 }
