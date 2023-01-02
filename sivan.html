@@ -9,60 +9,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script>
 
-function myFunction() {
-  // Declare variables
-
-  var input, filter, ul, li, a, i, txtValue;
-  input = document.getElementById('search');
-  filter = input.value.toUpperCase();
-  ul = document.getElementById("applist");
-  li = ul.getElementsByTagName('a');
-  
-  if(filter=="3456")
-{
-  document.location.href="dan.html";
-
-
-}
-
-  // Loop through all list items, and hide those who don't match the search query
-  for (i = 0; i < li.length; i++) {
-  
-//  alert("d");
-    a = li[i].getElementsByTagName("span")[0];
-    txtValue = a.textContent || a.innerText;
-	//alert(txtValue);
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = "";
-    } else {
-      li[i].style.display = "none";
-    }
-  }
-}
-
-
-function GetURLParameter(sParam)
-{
-    var sPageURL = window.location.search.substring(1);
-    var sURLVariables = sPageURL.split('&');
-    for (var i = 0; i < sURLVariables.length; i++) 
-    {
-        var sParameterName = sURLVariables[i].split('=');
-        if (sParameterName[0] == sParam) 
-        {
-            return sParameterName[1];
-        }
-    }
-	}
-
-document.onkeyup = function (event) {
-  //alert(event.keyCode);
-  if (event.keyCode >8 && event.keyCode <16) {
-  //document.getElementById("myInput").focus();
-  }
-};
-
-
 
 
 </script>
@@ -108,24 +54,24 @@ document.onkeyup = function (event) {
   
   </div>
 
+
+
+
 </body>
 
 <script>
-var blog = GetURLParameter('brand');
-var versionparam = GetURLParameter('version');
-var storeTile= document.getElementById("qinStore");
 
 
-    var version = parseFloat(versionparam);
-if(version>=1.3)
-{
- storeTile.style.display = 'none';
-//alert("hiding store");
+myFunction();
+function myFunction() {
+do{
+    input = prompt("Give input");
+}while(input == null || input == "" );
+
+console.log(input);
+
+
 }
-
-
-
-
 
 
 </script
