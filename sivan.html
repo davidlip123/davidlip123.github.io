@@ -7,52 +7,102 @@
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script>
 
 
+<style>
 
-</script>
+
+.curtain {
+	 margin: 0 auto;
+	 width: 100%;
+	 height: 100vh;
+	 overflow: hidden;
+}
+ .curtain__wrapper {
+	 width: 100%;
+	 height: 100%;
+}
+ .curtain__wrapper input[type=checkbox] {
+	 position: absolute;
+	 cursor: pointer;
+	 width: 100%;
+	 height: 100%;
+	 z-index: 100;
+	 opacity: 0;
+	 top: 0;
+	 left: 0;
+}
+ .curtain__wrapper input[type=checkbox]:checked ~ div.curtain__panel--left {
+	 transform: translateX(0);
+}
+ .curtain__wrapper input[type=checkbox]:checked ~ div.curtain__panel--right {
+	 transform: translateX(0);
+}
+ .curtain__panel {
+	 display: flex;
+	 align-items: center;
+	 background: #653818;
+	 color: #fff;
+	 float: left;
+	 position: relative;
+	 width: 50%;
+	 height: 100vh;
+	 transition: all 4s ease-out;
+	 z-index: 2;
+}
+ .curtain__panel--left {
+	 justify-content: flex-end;
+	 transform: translateX(-100%);
+}
+ .curtain__panel--right {
+	 justify-content: flex-start;
+	 transform: translateX(100%);
+}
+ .curtain__content {
+	 align-items: center;
+	 background: #333;
+	 color: #fff;
+	 display: flex;
+	 flex-direction: column;
+	 height: 100vh;
+	 justify-content: center;
+	 padding: 1rem 0;
+	 position: absolute;
+	 text-align: center;
+	 z-index: 1;
+	 width: 100%;
+}
+ .curtain__content img {
+	 width: 100%;
+}
+ 
+</style>
+
   </head>
   
   
   <body>
-  
-  <div class="header">
-  <h1></h1>
- 
-
-
-</div>
-
-
- <div class="body">
-
- 
- 
- 
- 
-   <div id="main">
-
-	
-		<div class="search-box">
-			<div class="search-icon"><i class="fa fa-search search-icon"></i></div>
+ <div class="curtain">
+  <div onclick="myclick()" class="curtain__wrapper">
+    <input type="checkbox" checked>
+    
+    <div  class="curtain__panel curtain__panel--left">
+      <h1>... בשביל משהו מגניב&nbsp;</h1>
+    </div> <!-- curtain__panel -->
+    
+    <div  class="curtain__content">
+      <img src="2.jpeg">
+      <h2>תני בלחיצה</h2>
+    </div>
+    
+    <div  class="curtain__panel curtain__panel--right">
+      <h1> תני בלחיצה</h1>
+    </div> <!-- curtain__panel -->
+    
+  </div> <!-- curtain__wrapper -->
+</div> <!-- curtain -->
 		
-				<input type="text" onkeyup="myFunction()" placeholder="חפש אפליקציה..." id="search" >
-		
-			<svg class="search-border" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" viewBox="0 0 671 111" style="enable-background:new 0 0 671 111;"
-			 xml:space="preserve">
-          <path class="border" d="M335.5,108.5h-280c-29.3,0-53-23.7-53-53v0c0-29.3,23.7-53,53-53h280"/>
-          <path class="border" d="M335.5,108.5h280c29.3,0,53-23.7,53-53v0c0-29.3-23.7-53-53-53h-280"/>
-        </svg>
-			<div class="go-icon"><i class="fa fa-arrow-left"></i></div>
-		</div>
-</div>
- 
 
-
-
-  
-  </div>
 
 
 
@@ -61,18 +111,71 @@
 
 <script>
 
+var clicked=false;
+alert("שלוםם😊 ,כמה שאלות לפני שאנחנו ממשיכים");
+alert("לוודא כמובן שזו את ולא שקד או משהו :)");
+alert("שנתחיל...?");
 
-myFunction();
-function myFunction() {
+
+
+firstone();
+second();
+third();
+
+
+function myclick() {
+
+
+if(!clicked)
+{
+ var audio=new Audio('violin.mp3');
+ audio.play();
+ clicked=true;
+ }
+
+}
+function firstone() {
+
+
 do{
-    input = prompt("Give input");
-}while(input == null || input == "" );
+    input = prompt("באיזה תאריך עברי הייתה הפגישה הראשונה שלנו?(מספיק רק תאריך בעברית בלי חודש)");
+}
+
+
+while(input == null || input == "" ||input !="כג");
 
 console.log(input);
+alert("יפה...! 😊אלופה...! נמשיך!");
 
 
 }
 
 
-</script
+
+function second() {
+do{
+    input = prompt("באיזה עיר הייתה הפגישה שבה נשפך עליי בקבוק מים? 😅");
+}
+
+
+while(input == null || input == "" ||input !="ירושלים");
+
+console.log(input);
+alert("יפה...! 😊אלופה...! נמשיך!");
+
+}
+
+function third() {
+do{
+    input = prompt("איזה מספר פגישה הכי שנאתי? 😅");
+}
+
+
+while(input == null || input == "" ||input !="4");
+
+console.log(input);
+alert("טווווב!! אוקיי......תהני לך.. 🥰");
+}
+
+</script>
 </html>
