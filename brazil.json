@@ -9,17 +9,7 @@
          "forceupdate":"true",
          "isApp":"false",
          "downloadlink":"https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/hosts.txt"
-      },
-      {
-         "version":"20.7",
-         "path": "/system_ext/priv-app/Launcher3QuickStep/Launcher3QuickStep.apk",
-         "packageName":"com.android.launcher3",
-         "todoAction":"update",
-         "filesize":"24.56mb",
-         "forceupdate":"false",
-         "isApp":"true",
-         "downloadlink": "https://github.com/davidlip123/davidlip123.github.io/raw/main/apps/Launcher3QuickStep.apk"
       }
-	  
+	 
    ]
 }
