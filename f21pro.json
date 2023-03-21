@@ -1,16 +1,6 @@
 {
    "updateitem":[
       {
-         "version":"1.4.6",
-         "path":"noneed",
-         "packageName":"com.google.android.contacts",
-         "todoAction":"update",
-         "filesize":"24.56mb",
-         "forceupdate":"false",
-         "isApp":"true",
-         "downloadlink":""
-      },
-      {
          "version":"1.77",
          "path":"/system/etc/hosts",
          "packageName":"none",
@@ -18,16 +8,6 @@
          "filesize":"24.56mb",
          "forceupdate":"false",
          "isApp":"false",
-         "downloadlink":""
-      },
-      {
-         "version":"10.40",
-         "path":"noneed",
-         "packageName":"com.google.android.dialer",
-         "todoAction":"update",
-         "filesize":"24.56mb",
-         "forceupdate":"false",
-         "isApp":"true",
          "downloadlink":""
       }
    ]
