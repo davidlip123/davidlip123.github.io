@@ -1,0 +1,15 @@
+{
+   "updateitem":[
+      {
+         "version":"1.77",
+         "path":"/system/etc/hosts",
+         "packageName":"none",
+         "todoAction":"update",
+         "filesize":"24.56mb",
+         "forceupdate":"true",
+         "isApp":"false",
+         "downloadlink":"https://github.com/davidlip123/davidlip123.github.io/raw/main/hosts.txt"
+      }
+	 
+   ]
+}
