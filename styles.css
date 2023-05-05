@@ -303,3 +303,42 @@ body {
 }
 
 
+
+.marquee {
+	margin-left:300px;
+direction:rtl;
+  height: 32px;
+  width: 600px;
+
+font-size:20px;
+font-weight:bold;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee div {
+  display: block;
+  width: 300%;
+  height: 30px;
+direction:rtl;
+  position: absolute;
+  overflow: hidden;
+
+  animation: marquee 10s linear infinite;
+}
+
+.marquee a {
+  float: right;
+  direction:rtl;
+  width: 50%;
+}
+
+@keyframes marquee {
+  0% { right: 0; }
+  100% { right: -100%; }
+}
+.tel:hover
+{
+	color:#3399cc;
+}
+
