@@ -308,7 +308,7 @@ body {
 	margin-left:300px;
 direction:rtl;
   height: 32px;
-  width: 600px;
+  width: 800px;
 
 font-size:20px;
 font-weight:bold;
@@ -329,7 +329,7 @@ direction:rtl;
 
 .marquee a {
   float: right;
-  direction:rtl;
+
   width: 50%;
 }
 
