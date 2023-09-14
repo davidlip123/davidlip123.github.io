@@ -1,6 +1,6 @@
 {
    "updateitem":[
-  {   "parameter": "com.google.android.gm" },
+  {   "parameter": "com.google.android.gm.lite" },
   {   "parameter": "com.waze1" },
   {   "parameter": "com.ubercab" }
    ]
