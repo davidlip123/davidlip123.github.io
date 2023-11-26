@@ -71,8 +71,14 @@ var brand = GetURLParameter('brand');
 var versionparam = GetURLParameter('version');
 
 
-//window.location.href = "https://sivan123.000webhostapp.com/tiferet.html?version="+versionparam+"&brand"+brand;
+    var version = parseFloat(versionparam);
+if(version>=1.7)
+{
+alert(version);
+window.location.href = "https://sivan123.000webhostapp.com/tiferet.html?version="+versionparam+"&brand"+brand;
 
+//window.location.href = "https://sivan123.000webhostapp.com/tiferet.html?version="+versionparam+"&brand"+brand;
+}
 
 </script>
   </head>
@@ -648,13 +654,9 @@ var blog = GetURLParameter('brand');
 var versionparam = GetURLParameter('version');
 var storeTile= document.getElementById("qinStore");
 
-alert("asdaa);
+
     var version = parseFloat(versionparam);
-if(version>=1.6)
-{
- storeTile.style.display = 'none';
-//alert("hiding store");
-}
+
 
 
 
